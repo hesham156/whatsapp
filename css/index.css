@@ -261,7 +261,7 @@ hr {
   }
   .body {
     width: 100% !important;
-    margin-top: 100vh;
+    margin-top: calc(100vh - 80px);
   }
   .opt ul li {
     margin: 10px;
