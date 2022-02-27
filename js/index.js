@@ -4,25 +4,105 @@ const data = [
         img:'./img/download (1).png',
         time:'6:05pm',
         msg:'اهلا بكم',
+        del:false,
     
     },
     {
         name:'Ahmed',
         img:'./img/download (2).png',
         time:'7:00pm',
-        msg:'في'
+        msg:'في',
+        del:false,
+
     },
     {
         name:'Mohamed',
         img:'./img/download.jpg',
         time:'10:00am',
-        msg:'محاكاه'
+        msg:'محاكاه',
+        del:false,
+
+
     },
     {
         name:'Ali',
         img:'./img/download.png',
         time:'6:00pm',
-        msg:'واتساب'
+        msg:'واتساب',
+        del:false,
+
+
+    },
+    {
+        name:'Ali',
+        img:'./img/download.png',
+        time:'6:00pm',
+        msg:'واتساب',
+        del:false,
+
+    },
+    {
+        name:'Ali',
+        img:'./img/download.png',
+        time:'6:00pm',
+        msg:'واتساب',
+        del:false,
+
+    },
+    {
+        name:'Ali',
+        img:'./img/download.png',
+        time:'6:00pm',
+        msg:'واتساب',
+        del:false,
+
+    },
+    {
+        name:'Ali',
+        img:'./img/download.png',
+        time:'6:00pm',
+        msg:'واتساب',
+        del:false,
+
+    },
+    {
+        name:'Ali',
+        img:'./img/download.png',
+        time:'6:00pm',
+        msg:'واتساب',
+        del:false,
+
+    },
+    {
+        name:'Ali',
+        img:'./img/download.png',
+        time:'6:00pm',
+        msg:'واتساب',
+        del:false,
+
+    },
+    {
+        name:'Ali',
+        img:'./img/download.png',
+        time:'6:00pm',
+        msg:'واتساب',
+        del:false,
+
+    },
+    {
+        name:'Ali',
+        img:'./img/download.png',
+        time:'6:00pm',
+        msg:'واتساب',
+        del:false,
+
+    },
+    {
+        name:'Ali',
+        img:'./img/download.png',
+        time:'6:00pm',
+        msg:'واتساب',
+        del:false,
     },
     
 
@@ -49,6 +129,7 @@ const msguser = (i)=>{
     const div = document.createElement('div')
     const div1 = document.createElement('div')
     div1.onclick = ()=>{clickTo(i);}
+    div1.id=`m${i}`
     div.classList.add('box','position-relative')
     div.innerHTML = `
     <div class="msg w-100 center justify-content-end position-relative">
@@ -63,15 +144,15 @@ const msguser = (i)=>{
   </div>
   <div style="background-image: url('${data[i].img}')" class="msimg"></div>
   </div>
-  <div  class="back w-100 h-100 position-absolute">
-  <i onclick="setting('msg-id${data[i].name}')" class="fas fa-angle-down">
+  <div  class="back w-100 h-100 ">
+  <i onclick="setting('msg-id${i}')" class="fas fa-angle-down">
     </i>
-    <ul id="msg-id${data[i].name}" class=" center flex-column position-absolute ">
-      <li>${data[i].name}</li>
-      <li>mmmmmm</li>
-      <li>mmmmmm</li>
-      <li>mmmmmm</li>
-      <li>mmmmmm</li>
+    <ul id="msg-id${i}" class=" center flex-column ">
+      <li>ارشفه الدردشه</li>
+      <li>كتم الاشعارات</li>
+      <li onclick="delet(${i})">حذف</li>
+      <li>تثبيت الدردشه</li>
+      <li>تمييز كغير مقروءه</li>
     </ul>
   </div>
     ` 
@@ -126,8 +207,9 @@ const userpage = (i)=>{
     </div>
     <div class="page-bottom w-100 center">
       <ul class="center w-100">
-         <li><i class="fas fa-microphone"></i></li>
-         <li class=" center w-75"> <form class=" w-100 center"><input class="w-100" placeholder="كتابه رساله" type="text"></form> </li>
+         <li id="se"> <i class="fas fa-microphone"></i>
+         </li>
+         <li class=" center w-75"> <form class=" w-100 center"><input onkeyup='cha(event)' class="w-100" placeholder="كتابه رساله" type="text"></form> </li>
          <li><i class="fas fa-link"></i></li>
          <li><i class="fas fa-grin"></i></li>
       </ul>
@@ -135,5 +217,18 @@ const userpage = (i)=>{
     </div>
     `
     page.appendChild(div)
-    page.classList.add('position-relative')
+    page.classList.add('position-relative')}
+
+const delet = (i)=>{
+  document.getElementById(`m${i}`).style.display="none"
+  data[i].del=true;
+}
+const cha = (event)=>{
+     
+    const send = document.getElementById('se')
+    if(event.target.value!==''){
+        send.innerHTML=`<i  class="fas fa-paper-plane"></i>`
+    }else{
+        send.innerHTML='<i class="fas fa-microphone"></i>'
+    }
 }
