@@ -1,16 +1,72 @@
- <!DOCTYPE html>
-     <html lang="en">
-        <head> 
-            <meta charset="UTF-8">  
-            <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-            <title>Document</title>
-            <link rel="stylesheet" href="./css/bootstrap.css">
-            <link rel="stylesheet" href="./css/index.css">
-        </head>
-        <body>
-        
-        
-      <script src="./js/bootstrap.js"></script>
-        </body>
-    </html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/bootstrap.css" />
+  <link rel="stylesheet" href="./css/all.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <script src="https://kit.fontawesome.com/f70731dcf2.js" crossorigin="anonymous"></script>
+  <script src="./js/index.js"></script>
+</head>
+
+<body>
+
+  <div class="body vh-100 w-70 f-l">
+    <div class="container  h-100">
+      <div id="userpage" class="userpage h-100 w-100">
+
+      </div>
+    </div>
+  </div>
+  <nav class="side vh-100 w-30 f-r">
+    <div class="nav-top w-100">
+      <div class="container h-100 ">
+        <div class="user w-50 f-r h-100 justify-content-end center">
+          <p>الاصدار التجريبي</p>
+          <div class="uimg b-r-50 cursor-p overflow-hidden"></div>
+        </div>
+        <div class="sett w-50 f-l justify-content-start h-100 center">
+          <ul class="center sett-ul">
+            <li onclick="setting('setting')" class=" cursor-p position-relative">
+              <i class="fas fa-ellipsis-v"></i>
+              <ul id="setting" dir="ltr" class="position-absolute overflow-hidden">
+                <li><a href="">مجموعة جديدة</a></li>
+                <li><a href="">الرسائل المميزه بنجمه</a></li>
+                <li><a href="">الاعدادات</a></li>
+                <li><a href="">تسجيل الخروج</a></li>
+              </ul>
+            </li>
+            <li><a href=""><i class="fas fa-comment-alt"></i></a></li>
+            <li class="cursor-p">
+              <i class="fas fa-check"></i>
+            </li>
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="nav-sr w-100">
+      <div class="container">
+        <form class="w-100 overflow-hidden">
+          <input dir="rtl" type="text" placeholder="البحث عن دردشة أو البدء بدردشة جديدة"
+            class="w-90 border-0 h-100 f-l">
+          <button class="w-10 h-100 border-0 f-r"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+    <hr>
+    <div class="mess w-100">
+      <div id="msg" class="container">
+
+      </div>
+    </div>
+  </nav>
+  <script src="./js/bootstrap.js"></script>
+</body>
+
+</html>

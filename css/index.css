@@ -1,3 +1,276 @@
-*{padding:0;
-          margin:0;
-               }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: inherit;
+}
+.h-0 {
+  height: 0px;
+}
+.bg {
+  background-color: aqua;
+  transition: 0.3s;
+}
+hr {
+  margin: 0;
+  background-color: #aebac1;
+}
+::placeholder {
+  color: #aebac1;
+  font-size: 15px;
+}
+.w-30 {
+  width: 30%;
+}
+.w-70 {
+  width: 70%;
+}
+.w-90 {
+  width: 90%;
+}
+.w-10 {
+  width: 10%;
+}
+.f-l {
+  float: left;
+}
+.f-r {
+  float: right;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cursor-p {
+  cursor: pointer;
+}
+.b-r-50 {
+  border-radius: 50%;
+}
+/* nav */
+.side {
+  background-color: #111b21;
+}
+.nav-top {
+  height: 60px;
+  background: #202c33;
+}
+.user,
+.sett {
+  color: #aebac1;
+}
+.user p {
+  font-size: 10px;
+  margin: 20px;
+}
+.user .uimg {
+  width: 35px;
+  height: 35px;
+  background-image: url("../img/image-260nw-386032732-removebg-preview (1).png");
+  background-size: cover;
+  background-position: center;
+  background-color: aliceblue;
+}
+.sett ul {
+  margin: 0;
+  padding: 0;
+}
+.sett-ul li {
+  border-radius: 50%;
+  background: none;
+  margin: 0px 15px;
+}
+#setting {
+  width: 0px;
+  height: 0px;
+  background: #202c33;
+  box-shadow: 0px 0px 5px 0px black;
+  border-radius: 7px;
+  z-index: 1111111111111111;
+  margin-top: 5px;
+  display: block;
+  top: 34px;
+  left: 0px;
+  margin-left: -5px;
+  transition: 0.3s;
+}
+#setting li {
+  text-align: center;
+  margin: 6px 0px;
+  width: 100%;
+}
+#setting li a {
+  display: block;
+  padding: 5px 0px;
+  transition: 0.3s;
+}
+#setting li a:hover,
+.time ul li:hover {
+  background-color: #111b21;
+}
+
+.nav-sr {
+  padding: 10px 0px;
+}
+.nav-sr form {
+  background: #202c33;
+  border-radius: 7px;
+  height: 35px;
+}
+.nav-sr form input,
+.nav-sr form button {
+  background: none;
+  outline: none;
+  color: #aebac1;
+}
+.mess {
+  height: 84%;
+}
+.msg {
+  height: 60px;
+  margin-top: 5px;
+  cursor: pointer;
+  padding: 0px 8px;
+  transition: 0.3s;
+  border-radius: 7px;
+}
+.msg:hover {
+  background-color: #2a3942;
+}
+.msimg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: aliceblue;
+}
+.mscont {
+  width: calc(100% - 110px);
+  direction: rtl;
+  color: white;
+}
+.mscont h4 {
+  margin: 0 10px;
+  font-size: 16px;
+}
+.mscont p {
+  margin: 0 10px;
+  font-size: 14px;
+  color: white;
+}
+.time {
+  width: 60px;
+  color: #aebac1;
+  font-size: 14px;
+  align-items: flex-start;
+}
+.back ul {
+  top: 0px;
+  left: -192px;
+
+  width: 190px;
+  height: 0px;
+  overflow: hidden;
+  background-color: #202c33;
+  box-shadow: 0px 0px 5px 0px black;
+  border-radius: 7px;
+  margin: 0;
+  z-index: 11111;
+  padding: 0;
+  transition: 0.3s;
+  cursor: auto;
+}
+.back ul li {
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+.back i {
+  padding: 7px;
+  margin-top: -14px;
+  margin-left: 5px;
+  font-size: 19px;
+  transition: 0.3s;
+}
+
+.body {
+  background-color: #222e35;
+}
+.box {
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  perspective: 100px;
+}
+.msg {
+  backface-visibility: hidden;
+}
+.per {
+  perspective: 400px;
+}
+.back {
+  backface-visibility: hidden;
+  transform: rotateX(-180deg);
+  top: 0;
+  background-color: #222e35;
+  border-radius: 7px;
+}
+.d1 {
+  color: #aebac1;
+}
+.d1 .box {
+  transform: rotateX(180deg);
+}
+.page-top {
+  height: 80px;
+  background-color: #202c33;
+  color: white;
+}
+.user-info .img {
+  width: 60px;
+  height: 60px;
+  background: aliceblue;
+  border-radius: 50%;
+  margin: 10px;
+}
+.opt ul {
+  margin: 0;
+}
+.opt ul li {
+  margin: 20px;
+  cursor: pointer;
+  padding: 10px;
+}
+/* media quary */
+@media only screen and (max-width: 800px) {
+  .side {
+    width: 100% !important;
+    position: fixed;
+    z-index: -1;
+  }
+  .body {
+    width: 100% !important;
+    margin-top: 55px;
+  }
+  .opt ul li {
+    margin: 10px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .user-info {
+    justify-content: flex-end;
+  }
+  .opt ul {
+    justify-content: flex-start;
+  }
+}
