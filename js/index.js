@@ -1,25 +1,26 @@
 const data = [
     {
         name:'hesham ',
-        img:'',
+        img:'./img/download (1).png',
         time:'6:05pm',
-        msg:'اهلا بكم'
+        msg:'اهلا بكم',
+    
     },
     {
         name:'Ahmed',
-        img:'',
+        img:'./img/download (2).png',
         time:'7:00pm',
         msg:'في'
     },
     {
         name:'Mohamed',
-        img:'',
+        img:'./img/download.jpg',
         time:'10:00am',
         msg:'محاكاه'
     },
     {
         name:'Ali',
-        img:'',
+        img:'./img/download.png',
         time:'6:00pm',
         msg:'واتساب'
     },
@@ -60,7 +61,7 @@ const msguser = (i)=>{
     <p>${data[i].msg}</p>
 
   </div>
-  <div class="msimg"></div>
+  <div style="background-image: url('${data[i].img}')" class="msimg"></div>
   </div>
   <div  class="back w-100 h-100 position-absolute">
   <i onclick="setting('msg-id${data[i].name}')" class="fas fa-angle-down">
@@ -96,6 +97,7 @@ for(let i = 0 ; i<data.length;i++){
  pages[z].classList.add('h-100','bg')
  pages[z].classList.remove('h-0')
 }
+let date = new Date()
 const userpage = (i)=>{
     const page = document.getElementById('userpage')
     const div = document.createElement('div')
@@ -111,8 +113,25 @@ const userpage = (i)=>{
        </div>
        <div class='user-info w-50 h-100 center'>
                 <div class='text'><h4>${data[i].name}</h4></div>
-                <div class='img'></div>
+                <div style="background-image: url('${data[i].img}')" class='img'></div>
        </div>
+    </div>
+    <div class="page-body w-100 center align-items-end">
+     <div class=" container">
+        <div class="center text-center">
+        <p>${date.getHours()}:${date.getMinutes()}</p>
+        <h5>${data[i].msg}</h5>
+        </div>
+     </div>
+    </div>
+    <div class="page-bottom w-100 center">
+      <ul class="center w-100">
+         <li><i class="fas fa-microphone"></i></li>
+         <li class=" center w-75"> <form class=" w-100 center"><input class="w-100" placeholder="كتابه رساله" type="text"></form> </li>
+         <li><i class="fas fa-link"></i></li>
+         <li><i class="fas fa-grin"></i></li>
+      </ul>
+    
     </div>
     `
     page.appendChild(div)

@@ -151,7 +151,9 @@ hr {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: aliceblue;
+  background-position: center;
+  background-size: cover;
+  background-color: aliceblue;
 }
 .mscont {
   width: calc(100% - 110px);
@@ -239,8 +241,10 @@ hr {
 .user-info .img {
   min-width: 60px;
   min-height: 60px;
-  background: aliceblue;
+  background-color: aliceblue;
   border-radius: 50%;
+  background-position: center;
+  background-size: cover;
   margin: 10px;
 }
 .opt ul {
@@ -251,6 +255,58 @@ hr {
   margin: 20px;
   cursor: pointer;
   padding: 10px;
+}
+.page-body {
+  background-image: url("../img/bg-chat-tile-dark_a4be512e7195b6b733d9110b408f075d.png");
+  background-position: center;
+  background-size: contain;
+  background-blend-mode: overlay;
+  background-color: #2a3942;
+  height: 79%;
+}
+.page-body div div {
+  width: 140px;
+  height: 30px;
+  background: #222e35;
+  float: right;
+  border-radius: 7px;
+  margin: 10px;
+  color: white;
+}
+.page-body div div p {
+  margin-top: 24px;
+  width: 100%;
+  text-align: left;
+  font-size: 13px;
+}
+.page-body div div h5 {
+  font-size: 17px;
+  width: 100%;
+  text-align: start;
+  padding: 0;
+}
+.page-bottom {
+  height: 10%;
+  background: #202c33;
+  color: #aebac1;
+}
+.page-bottom ul {
+  padding: 0;
+  margin: 0;
+}
+.page-bottom ul li {
+  margin: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.page-bottom ul li input {
+  outline: none;
+  background: #2a3942;
+  border: 0;
+  border-radius: 7px;
+  height: 40px;
+  direction: rtl;
+  color: white;
 }
 /* media quary */
 @media only screen and (max-width: 800px) {
