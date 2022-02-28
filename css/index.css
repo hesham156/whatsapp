@@ -60,7 +60,6 @@ hr {
 /* nav */
 .side {
   background-color: #111b21;
-  overflow: auto;
 }
 .nav-top {
   height: 60px;
@@ -137,7 +136,7 @@ hr {
 }
 .mess {
   height: 84%;
-  padding-bottom: 65px;
+  padding-bottom: 120px;
   overflow: auto;
 }
 .msg {
