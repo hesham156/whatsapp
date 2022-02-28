@@ -132,7 +132,7 @@ const msguser = (i)=>{
     div1.id=`m${i}`
     div.classList.add('box','position-relative')
     div.innerHTML = `
-    <div class="msg w-100 center justify-content-end position-relative">
+    <div class="msg w-100 center justify-content-end position-absolute">
     <div class="time center h-100 overflow-hidden flex-column justify-content-start">
     <p>${data[i].time}</p>
     
@@ -145,6 +145,7 @@ const msguser = (i)=>{
   <div style="background-image: url('${data[i].img}')" class="msimg"></div>
   </div>
   <div  class="back w-100 h-100 ">
+  <p class="f-r">Online</p>
   <i onclick="setting('msg-id${i}')" class="fas fa-angle-down">
     </i>
     <ul id="msg-id${i}" class=" center flex-column ">
@@ -207,9 +208,9 @@ const userpage = (i)=>{
     </div>
     <div class="page-bottom w-100 center">
       <ul class="center w-100">
-         <li id="se"> <i class="fas fa-microphone"></i>
+         <li id="se${i}"> <i class="fas fa-microphone"></i>
          </li>
-         <li class=" center w-75"> <form class=" w-100 center"><input onkeyup='cha(event)' class="w-100" placeholder="كتابه رساله" type="text"></form> </li>
+         <li class=" center w-75"> <form class=" w-100 center"><input onkeyup='cha(event,${i})' class="w-100" placeholder="كتابه رساله" type="text"></form> </li>
          <li><i class="fas fa-link"></i></li>
          <li><i class="fas fa-grin"></i></li>
       </ul>
@@ -223,9 +224,9 @@ const delet = (i)=>{
   document.getElementById(`m${i}`).style.display="none"
   data[i].del=true;
 }
-const cha = (event)=>{
+const cha = (event,i)=>{
      
-    const send = document.getElementById('se')
+    const send = document.getElementById(`se${i}`)
     if(event.target.value!==''){
         send.innerHTML=`<i  class="fas fa-paper-plane"></i>`
     }else{

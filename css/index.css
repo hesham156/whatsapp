@@ -196,10 +196,13 @@ hr {
   text-align: center;
   cursor: pointer;
 }
+.back p {
+  display: inline-block;
+  margin: 15px;
+}
 .back i {
-  padding: 7px;
-  margin-top: -14px;
-  margin-left: 5px;
+  padding: 20px;
+
   font-size: 19px;
   transition: 0.3s;
 }
@@ -209,9 +212,11 @@ hr {
 }
 .box {
   transition: transform 1s;
+  margin: 5px 0px;
   transform-style: preserve-3d;
   transform-origin: center;
   perspective: 100px;
+  padding-bottom: 3px;
 }
 .msg {
   backface-visibility: hidden;
