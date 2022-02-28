@@ -166,6 +166,9 @@ hr {
   margin: 0 10px;
   font-size: 16px;
 }
+.text h4 {
+  font-size: 20px;
+}
 .mscont p {
   margin: 0 10px;
   font-size: 14px;
@@ -239,7 +242,7 @@ hr {
   transform: rotateX(180deg);
 }
 .page-top {
-  height: 80px;
+  height: 10%;
   background-color: #202c33;
   color: white;
 }
@@ -285,7 +288,7 @@ hr {
   background-size: contain;
   background-blend-mode: overlay;
   background-color: #2a3942;
-  height: 79%;
+  height: 80%;
 }
 .page-body div div {
   width: 140px;
@@ -340,7 +343,7 @@ hr {
   }
   .body {
     width: 100% !important;
-    margin-top: calc(100vh - 130px);
+    margin-top: calc(100vh - 100px);
   }
   .opt ul li {
     margin: 10px;
