@@ -140,9 +140,8 @@ for(let i = 0 ; i<data.length;i++){
 let date = new Date()
 const userpage = (i)=>{
     const page = document.getElementById('userpage')
-    const div = document.createElement('div')
-    div.classList.add('w-100','h-100','position-absolute','top-0','overflow-hidden','center','justify-content-start','flex-column')
-    div.innerHTML=`
+    page.innerHTML=`
+    <div class='top-0 w-100 h-100 center overflow-hidden justify-content-start flex-column position-absolute'>
     <div class='page-top w-100 h-auto center'>
        <div class='opt w-50 h-100 center' >
           <ul class="w-100 center">
@@ -184,9 +183,10 @@ const userpage = (i)=>{
       </ul>
     
     </div>
+    </div>
     `
-    page.appendChild(div)
-    page.classList.add('position-relative')}
+    page.classList.add('position-relative')
+}
 
 const delet = (i)=>{
   document.getElementById(`m${i}`).style.display="none"
@@ -211,5 +211,4 @@ const sendmsg = (msg,i)=>{
   <p>${date.getHours()}:${date.getMinutes()}</p>
  <h5>${msg}</h5>`
  mus.appendChild(div)
- themsg.value=''
 }
