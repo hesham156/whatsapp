@@ -90,7 +90,7 @@ const msguser = (i)=>{
     const msg = document.getElementById("msg") 
     const div = document.createElement('div')
     const div1 = document.createElement('div')
-    div1.onclick = ()=>{clickTo(i);}
+    div1.onclick = ()=>{clickTo(i);userpage(i)}
     div1.id=`m${i}`
     div.classList.add('box','position-relative')
     div.innerHTML = `
@@ -126,26 +126,24 @@ const msguser = (i)=>{
 onload = ()=>{
     for(let i=0;i<data.length;i++){
         msguser(i)
-        userpage(i)
+        // userpage(i)
     }
 }
 const clickTo = (z)=>{
 const ch = document.getElementById('msg').children
-const pages = document.getElementById('userpage').children
+// const pages = document.getElementById('userpage').children
 for(let i = 0 ; i<data.length;i++){
     ch[i].classList.remove('per','d1')
-    pages[i].classList.add('h-0')
-    pages[i].classList.remove('h-100')
+    
 }
  ch[z].classList.add('per','d1')
- pages[z].classList.add('h-100','bg')
- pages[z].classList.remove('h-0')
+
 }
 let date = new Date()
 const userpage = (i)=>{
     const page = document.getElementById('userpage')
     const div = document.createElement('div')
-    div.classList.add('w-100','h-0','position-absolute','top-0','overflow-hidden','center','justify-content-start','flex-column')
+    div.classList.add('w-100','h-100','position-absolute','top-0','overflow-hidden','center','justify-content-start','flex-column')
     div.innerHTML=`
     <div class='page-top w-100 center'>
        <div class='opt w-50 h-100 center' >
