@@ -136,7 +136,7 @@ hr {
 }
 .mess {
   height: 84%;
-  padding-bottom: 120px;
+  padding-bottom: 130px;
   overflow: auto;
 }
 .msg {
@@ -344,7 +344,7 @@ hr {
   }
   .body {
     width: 100% !important;
-    margin-top: calc(100vh - 100px);
+    margin-top: calc(100vh - 115px);
   }
   .opt ul li {
     margin: 10px;
