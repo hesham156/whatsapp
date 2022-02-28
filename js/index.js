@@ -12,7 +12,7 @@ const data = [
         img:'./img/download (2).png',
         time:'7:00pm',
         msg:'في',
-        del:false,
+        del:true,
 
     },
     {
@@ -25,8 +25,8 @@ const data = [
 
     },
     {
-        name:'Ali',
-        img:'./img/download.png',
+        name:'Hesham Ahmed',
+        img:'./img/8b167af653c2399dd93b952a48740620.jpg',
         time:'6:00pm',
         msg:'واتساب',
         del:false,
@@ -38,7 +38,7 @@ const data = [
         img:'./img/download.png',
         time:'6:00pm',
         msg:'واتساب',
-        del:false,
+        del:true,
 
     },
     {
@@ -50,61 +50,22 @@ const data = [
 
     },
     {
-        name:'Ali',
-        img:'./img/download.png',
-        time:'6:00pm',
+        name:'Mahmoud',
+        img:'./img/image-260nw-386032732-removebg-preview (1).png',
+        time:'10:05pm',
         msg:'واتساب',
         del:false,
 
     },
     {
-        name:'Ali',
-        img:'./img/download.png',
+        name:'fatma',
+        img:'./img/download (1).jpg',
         time:'6:00pm',
         msg:'واتساب',
-        del:false,
+        del:true,
 
     },
-    {
-        name:'Ali',
-        img:'./img/download.png',
-        time:'6:00pm',
-        msg:'واتساب',
-        del:false,
 
-    },
-    {
-        name:'Ali',
-        img:'./img/download.png',
-        time:'6:00pm',
-        msg:'واتساب',
-        del:false,
-
-    },
-    {
-        name:'Ali',
-        img:'./img/download.png',
-        time:'6:00pm',
-        msg:'واتساب',
-        del:false,
-
-    },
-    {
-        name:'Ali',
-        img:'./img/download.png',
-        time:'6:00pm',
-        msg:'واتساب',
-        del:false,
-
-    },
-    {
-        name:'Ali',
-        img:'./img/download.png',
-        time:'6:00pm',
-        msg:'واتساب',
-        del:false,
-    },
-    
 
 ]
 const setting = (id)=>{
@@ -116,10 +77,11 @@ const setting = (id)=>{
     }else if(sett.height === '170px'){
         sett.height='0px'
         sett.width='0px'
-    }}else{
+    }
+}else{
         if(sett.height==='0px' ||sett.height===''){
-            sett.height='170px'
-        }else if(sett.height === '170px'){
+            sett.height='200px'
+        }else if(sett.height === '200px'){
             sett.height='0px'
         }
     }
@@ -145,7 +107,7 @@ const msguser = (i)=>{
   <div style="background-image: url('${data[i].img}')" class="msimg"></div>
   </div>
   <div  class="back w-100 h-100 ">
-  <p class="f-r">Online</p>
+  <p class="f-r">${data[i].del?"Online":"Ofline"}</p>
   <i onclick="setting('msg-id${i}')" class="fas fa-angle-down">
     </i>
     <ul id="msg-id${i}" class=" center flex-column ">
@@ -188,7 +150,17 @@ const userpage = (i)=>{
     <div class='page-top w-100 center'>
        <div class='opt w-50 h-100 center' >
           <ul class="w-100 center">
-            <li><i class="fas fa-ellipsis-v"></i></li>
+            <li class="position-relative" onclick="setting('msgp${i}')">
+            <i class="fas fa-ellipsis-v"></i>
+            <ul id="msgp${i}" class="position-absolute center flex-column h-0 overflow-hidden">
+              <li>معلومات جهه الاتصال</li>
+              <li>تحديد الرسائل</li>
+              <li>اغلاق الدردشه</li>
+              <li>كتم الاشعارات</li>
+              <li>مسح الرسائل</li>
+              <li>حذف الدردشه</li>
+            </ul>
+            </li>
             <li><i class="fas fa-phone"></i></li>
             <li><i class="fas fa-video"></i></li>
           </ul>

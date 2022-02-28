@@ -115,7 +115,8 @@ hr {
   transition: 0.3s;
 }
 #setting li a:hover,
-.back ul li:hover {
+.back ul li:hover,
+.opt ul li ul li:hover {
   background-color: #111b21;
 }
 
@@ -254,7 +255,25 @@ hr {
 .opt ul {
   margin: 0;
   padding: 0;
+  transition: 0.3s;
 }
+.opt ul li ul {
+  width: 200px;
+  background: #202c33;
+  cursor: auto;
+  border-radius: 7px;
+  box-shadow: 0px 0px 5px 0px black;
+
+  color: #aebac1;
+}
+.opt ul li ul li {
+  width: 100%;
+  text-align: center;
+  padding: 3px;
+  margin: 0;
+  cursor: pointer;
+}
+
 .opt ul li {
   margin: 20px;
   cursor: pointer;
