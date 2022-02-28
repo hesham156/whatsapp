@@ -90,7 +90,7 @@ const msguser = (i)=>{
     const msg = document.getElementById("msg") 
     const div = document.createElement('div')
     const div1 = document.createElement('div')
-    div1.onclick = ()=>{clickTo(i);userpage(i);scrollTo(0,1000)}
+    div1.onclick = ()=>{clickTo(i);userpage(i)}
     div1.id=`m${i}`
     div.classList.add('box','position-relative')
     div.innerHTML = `
