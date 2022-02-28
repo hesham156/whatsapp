@@ -145,7 +145,7 @@ const userpage = (i)=>{
     const div = document.createElement('div')
     div.classList.add('w-100','h-100','position-absolute','top-0','overflow-hidden','center','justify-content-start','flex-column')
     div.innerHTML=`
-    <div class='page-top w-100 center'>
+    <div class='page-top w-100 h-auto center'>
        <div class='opt w-50 h-100 center' >
           <ul class="w-100 center">
             <li class="position-relative" onclick="setting('msgp${i}')">
@@ -176,7 +176,7 @@ const userpage = (i)=>{
         </div>
      </div>
     </div>
-    <div class="page-bottom w-100 center">
+    <div class="page-bottom w-100 h-auto center">
       <ul class="center w-100">
          <li id="se${i}"> <i class="fas fa-microphone"></i>
          </li>
