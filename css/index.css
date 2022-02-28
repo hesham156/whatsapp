@@ -60,6 +60,7 @@ hr {
 /* nav */
 .side {
   background-color: #111b21;
+  overflow: auto;
 }
 .nav-top {
   height: 60px;
