@@ -126,12 +126,10 @@ const msguser = (i)=>{
 onload = ()=>{
     for(let i=0;i<data.length;i++){
         msguser(i)
-        // userpage(i)
     }
 }
 const clickTo = (z)=>{
 const ch = document.getElementById('msg').children
-// const pages = document.getElementById('userpage').children
 for(let i = 0 ; i<data.length;i++){
     ch[i].classList.remove('per','d1')
     
@@ -169,7 +167,7 @@ const userpage = (i)=>{
        </div>
     </div>
     <div class="page-body w-100 center align-items-end">
-     <div class=" container">
+     <div id="mus${i}" class=" container">
         <div class="center text-center">
         <p>${date.getHours()}:${date.getMinutes()}</p>
         <h5>${data[i].msg}</h5>
@@ -180,7 +178,7 @@ const userpage = (i)=>{
       <ul class="center w-100">
          <li id="se${i}"> <i class="fas fa-microphone"></i>
          </li>
-         <li class=" center w-75"> <form class=" w-100 center"><input onkeyup='cha(event,${i})' class="w-100" placeholder="كتابه رساله" type="text"></form> </li>
+         <li class=" center w-75"> <form class=" w-100 center"><input id='themsg${i}' onkeyup='cha(event,${i})' class="w-100" placeholder="كتابه رساله" type="text"></form> </li>
          <li><i class="fas fa-link"></i></li>
          <li><i class="fas fa-grin"></i></li>
       </ul>
@@ -198,8 +196,20 @@ const cha = (event,i)=>{
      
     const send = document.getElementById(`se${i}`)
     if(event.target.value!==''){
-        send.innerHTML=`<i  class="fas fa-paper-plane"></i>`
+        send.innerHTML=`<i  onclick="sendmsg('${event.target.value}',${i})" class="fas fa-paper-plane"></i>`
     }else{
         send.innerHTML='<i class="fas fa-microphone"></i>'
     }
+}
+const sendmsg = (msg,i)=>{
+//    localStorage.setItem(i,JSON.stringify([msg]))
+ const mus = document.getElementById(`mus${i}`)
+ const themsg = document.getElementById(`themsg${i}`)
+ const div = document.createElement('div')
+ div.classList.add('mus','center')
+ div.innerHTML=`
+  <p>${date.getHours()}:${date.getMinutes()}</p>
+ <h5>${msg}</h5>`
+ mus.appendChild(div)
+ themsg.value=''
 }

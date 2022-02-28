@@ -293,12 +293,24 @@ hr {
 }
 .page-body div div {
   width: 140px;
+  color: white;
+  border-radius: 7px;
   height: 30px;
+}
+.page-body div div:first-child {
   background: #222e35;
   float: right;
-  border-radius: 7px;
   margin: 10px;
-  color: white;
+  margin-left: 100%;
+}
+.page-body .mus {
+  margin-right: 100%;
+  margin-bottom: 10px;
+  width: auto;
+  min-width: 20px;
+}
+.mus h5 {
+  padding: 11px !important;
 }
 .page-body div div p {
   margin-top: 24px;
@@ -334,6 +346,10 @@ hr {
   height: 40px;
   direction: rtl;
   color: white;
+}
+.mus {
+  float: left;
+  background: #005c4b;
 }
 /* media quary */
 @media only screen and (max-width: 800px) {
