@@ -22,7 +22,7 @@
       </div>
     </div>
   </div>
-  <div class="side vh-100 w-30 f-r">
+  <div class="side vh-100 w-30 f-r pos-relative overflow-auto">
     <div class="nav-top w-100">
       <div class="container h-100 ">
         <div class="user w-50 f-r h-100 justify-content-end center">
@@ -40,7 +40,7 @@
                 <li><a href="">تسجيل الخروج</a></li>
               </ul>
             </li>
-            <li><a href=""><i class="fas fa-comment-alt"></i></a></li>
+            <li onclick="setting('frind')"><i class="fas fa-comment-alt"></i></li>
             <li class="cursor-p">
               <i class="fas fa-check"></i>
             </li>
@@ -50,25 +50,36 @@
         </div>
       </div>
     </div>
-    <div class="nav-sr w-100">
-      <div class="container">
+    <div class="container position-relative">
+      <div class="nav-sr w-100">
         <form class="w-100 overflow-hidden">
           <input dir="rtl" type="text" placeholder="البحث عن دردشة أو البدء بدردشة جديدة"
             class="w-90 border-0 h-100 f-l">
           <button class="w-10 h-100 border-0 f-r"><i class="fas fa-search"></i></button>
         </form>
       </div>
-    </div>
-    <hr>
-    <div class="mess w-100">
-      <div id="msg" class="container">
+      <hr>
+      <div class="mess w-100">
+        <div id="msg">
+
+        </div>
+      </div>
+      <div id="frind" class="frind w-100 position-absolute top-0 center overflow-hidden">
+        <div class=" container w-100 h-100 position-relative">
+          <!-- <i class="far fa-arrow-alt-circle-left"></i> -->
+          <div class="nav-sr w-100">
+            <form class="w-100 overflow-hidden">
+              <input dir="rtl" type="text" placeholder="البحث عن جهه اتصال" class="w-90 border-0 h-100 f-l">
+              <button class="w-10 h-100 border-0 f-r"><i class="fas fa-search"></i></button>
+            </form>
+          </div>
+        </div>
+
 
       </div>
     </div>
   </div>
-  <div class="frind">
-    <div class="container"></div>
-  </div>
+
 
   <script src="./js/bootstrap.js"></script>
 </body>

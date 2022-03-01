@@ -78,7 +78,14 @@ const setting = (id)=>{
         sett.height='0px'
         sett.width='0px'
     }
-}else{
+}else if(id==='frind'){
+    if(sett.height==='0px' ||sett.height===''){
+        sett.height='calc(100vh - 60px)'
+    }else if(sett.height === 'calc(100vh - 60px)'){
+        sett.height='0px'
+    }
+}
+else{
         if(sett.height==='0px' ||sett.height===''){
             sett.height='200px'
         }else if(sett.height === '200px'){
@@ -90,7 +97,7 @@ const msguser = (i)=>{
     const msg = document.getElementById("msg") 
     const div = document.createElement('div')
     const div1 = document.createElement('div')
-    div1.onclick = ()=>{clickTo(i);userpage(i)}
+    div1.onclick = ()=>{clickTo(i);userpage(i);}
     div1.id=`m${i}`
     div.classList.add('box','position-relative')
     div.innerHTML = `
@@ -132,6 +139,7 @@ const clickTo = (z)=>{
 const ch = document.getElementById('msg').children
 for(let i = 0 ; i<data.length;i++){
     ch[i].classList.remove('per','d1')
+
     
 }
  ch[z].classList.add('per','d1')
@@ -165,7 +173,7 @@ const userpage = (i)=>{
                 <div style="background-image: url('${data[i].img}')" class='img'></div>
        </div>
     </div>
-    <div class="page-body w-100 center align-items-end">
+    <div id="page-body" class="page-body overflow-auto w-100">
      <div id="mus${i}" class=" container">
         <div class="center text-center">
         <p>${date.getHours()}:${date.getMinutes()}</p>
@@ -202,13 +210,13 @@ const cha = (event,i)=>{
     }
 }
 const sendmsg = (msg,i)=>{
-//    localStorage.setItem(i,JSON.stringify([msg]))
  const mus = document.getElementById(`mus${i}`)
- const themsg = document.getElementById(`themsg${i}`)
+ const page = document.getElementById(`page-body`)
  const div = document.createElement('div')
- div.classList.add('mus','center')
+ div.classList.add('mus','center','overflow-hidden')
  div.innerHTML=`
   <p>${date.getHours()}:${date.getMinutes()}</p>
  <h5>${msg}</h5>`
+page.scrollTo(0,40*9000000)
  mus.appendChild(div)
 }

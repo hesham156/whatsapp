@@ -244,6 +244,7 @@ hr {
 }
 .page-top {
   max-height: 70px;
+  z-index: 111111111;
   background-color: #202c33;
   color: white;
 }
@@ -353,6 +354,13 @@ hr {
   float: left;
   background: #005c4b;
 }
+.frind {
+  background-color: #111b21;
+  transition: 0.3s;
+  height: 0;
+  left: 0;
+}
+
 /* media quary */
 @media only screen and (max-width: 800px) {
   .side {
