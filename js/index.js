@@ -1,5 +1,24 @@
 const data = [
     {
+        name:'حبيبه احمد ابو عميره',
+        img:'./img/download (1).jpg',
+        time:'6:00pm',
+        msg:'واتساب',
+        del:true,
+        'pio':'جمله مفيده مبين قوسين',
+        res:{
+            a:'وانا كمن بحبك',
+            b:'انت عاامل اي',
+            c:'اناالحمدلله',
+            d:'اسمي ساره احمد',
+            e:'انت ف كليه اي',
+            f:'محامي بس لسه تحت بير السلم يعني',
+            g:'عقبال متبقي فوق السطوح ي قلبي',
+
+        }
+
+    },
+    {
         name:'hesham ',
         img:'./img/download (1).png',
         time:'6:05pm',
@@ -63,15 +82,7 @@ const data = [
         pio:'منور يصحبي'
 
     },
-    {
-        name:'fatma',
-        img:'./img/download (1).jpg',
-        time:'6:00pm',
-        msg:'واتساب',
-        del:true,
-        'pio':'جمله مفيده مبين قوسين'
-
-    },
+   
 
 
 ]
@@ -186,7 +197,7 @@ const userpage = (i)=>{
     </div>
     <div id="page-body" class="page-body overflow-auto w-100">
      <div id="mus${i}" class=" container">
-        <div class="center text-center">
+        <div class="res center text-center">
         <p>${date.getHours()}:${date.getMinutes()}</p>
         <h5>${data[i].msg}</h5>
         </div>
@@ -234,6 +245,36 @@ page.scrollTo(0,40*9000000)
  mus.appendChild(div)
  themsg.focus()
  themsg.value=''
+ setTimeout(()=>{
+if(i===0){
+    const div2 = document.createElement('div')
+    div2.classList.add('res','center','overflow-hidden')
+switch(msg){
+    case "بحبك":
+        div2.innerHTML=`
+        <p>${date.getHours()}:${date.getMinutes()}</p>
+        <h5>
+     ${data[i].res.a}</h5>    `
+     mus.appendChild(div2)
+    break;
+    case "عامله اي":
+        div2.innerHTML=`
+        <p>${date.getHours()}:${date.getMinutes()}</p>
+        <h5>
+     ${data[i].res.c}</h5>    `
+     
+     mus.appendChild(div2)
+     break;
+     default:
+        div2.innerHTML=`
+        <p>${date.getHours()}:${date.getMinutes()}</p>
+        <h5>قولي بحبك</h5>    `
+     mus.appendChild(div2)
 
+
+
+}
+mus.appendChild(div2)
+}},3000)
 }
 }

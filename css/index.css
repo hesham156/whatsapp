@@ -245,6 +245,8 @@ hr {
 }
 .time span p {
   display: none;
+  margin-top: 13px;
+  margin-left: -14px;
 }
 .time span:hover p {
   display: block;
@@ -309,15 +311,15 @@ hr {
   height: 80%;
 }
 .page-body div div {
-  width: 140px;
   color: white;
   border-radius: 7px;
   height: 30px;
 }
-.page-body div div:first-child {
+.res {
   background: #222e35;
   float: right;
   margin: 10px;
+  width: 200px;
   margin-left: 100%;
 }
 .page-body .mus {
