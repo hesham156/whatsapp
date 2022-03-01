@@ -112,7 +112,10 @@ const msguser = (i)=>{
     <div  class="msg w-100 center justify-content-end position-absolute">
     <div class="time center h-100 overflow-hidden flex-column justify-content-start">
     <p>${data[i].time}</p>
-    
+    <span style=${data[i].del?"background:#68ff68;box-shadow:0px 0px 7px #6af26a;":"background:#111b21;box-shadow:0px 0px 7px #222e35"} class="b-r-50 position-absolute">
+      <p>${data[i].del?"Online":"Ofline"}</p>
+    </span>
+
   </div>
   <div class="mscont center flex-column align-items-start justify-content-start h-100">
     <h4>${data[i].name}</h4>
@@ -209,17 +212,19 @@ const delet = (i)=>{
   data[i].del=true;
 }
 const cha = (event,i)=>{
-     
     const send = document.getElementById(`se${i}`)
-    if(event.target.value!==''){
-        send.innerHTML=`<i  onclick="sendmsg('${event.target.value}',${i})" class="fas fa-paper-plane"></i>`
-    }else{
+    if(event.target.value===''||event.target.value==="undefined"||event.target.value===' '){
         send.innerHTML='<i class="fas fa-microphone"></i>'
+
+    }else{
+        send.innerHTML=`<i  onclick="sendmsg('${event.target.value}',${i})" class="fas fa-paper-plane"></i>`
     }
 }
 const sendmsg = (msg,i)=>{
+    if(msg!=="undefined"){
  const mus = document.getElementById(`mus${i}`)
  const page = document.getElementById(`page-body`)
+ const themsg = document.getElementById(`themsg${i}`)
  const div = document.createElement('div')
  div.classList.add('mus','center','overflow-hidden')
  div.innerHTML=`
@@ -227,4 +232,8 @@ const sendmsg = (msg,i)=>{
  <h5>${msg}</h5>`
 page.scrollTo(0,40*9000000)
  mus.appendChild(div)
+ themsg.focus()
+ themsg.value=''
+
+}
 }

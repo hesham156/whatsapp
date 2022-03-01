@@ -236,6 +236,20 @@ hr {
   background-color: #222e35;
   border-radius: 7px;
 }
+.time span {
+  width: 10px;
+  height: 10px;
+  display: block;
+  left: 25px;
+  top: 50%;
+}
+.time span p {
+  display: none;
+}
+.time span:hover p {
+  display: block;
+}
+
 .d1 {
   color: #aebac1;
 }
