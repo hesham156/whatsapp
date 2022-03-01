@@ -5,6 +5,7 @@ const data = [
         time:'6:05pm',
         msg:'اهلا بكم',
         del:false,
+        pio:"صلي علي النبي"
     
     },
     {
@@ -13,6 +14,7 @@ const data = [
         time:'7:00pm',
         msg:'في',
         del:true,
+        pio:'لسه في وقت كمل'
 
     },
     {
@@ -21,6 +23,7 @@ const data = [
         time:'10:00am',
         msg:'محاكاه',
         del:false,
+        pio:'بكره ترووق وتحلي'
 
 
     },
@@ -30,7 +33,7 @@ const data = [
         time:'6:00pm',
         msg:'واتساب',
         del:false,
-
+        pio:'اي كلام'
 
     },
     {
@@ -39,6 +42,7 @@ const data = [
         time:'6:00pm',
         msg:'واتساب',
         del:true,
+        'pio':'بعدين بعدين'
 
     },
     {
@@ -47,6 +51,7 @@ const data = [
         time:'6:00pm',
         msg:'واتساب',
         del:false,
+        'pio':'انا عااطف معااكوا'
 
     },
     {
@@ -55,6 +60,7 @@ const data = [
         time:'10:05pm',
         msg:'واتساب',
         del:false,
+        pio:'منور يصحبي'
 
     },
     {
@@ -63,6 +69,7 @@ const data = [
         time:'6:00pm',
         msg:'واتساب',
         del:true,
+        'pio':'جمله مفيده مبين قوسين'
 
     },
 
@@ -85,6 +92,7 @@ const setting = (id)=>{
         sett.height='0px'
     }
 }
+
 else{
         if(sett.height==='0px' ||sett.height===''){
             sett.height='200px'
@@ -101,7 +109,7 @@ const msguser = (i)=>{
     div1.id=`m${i}`
     div.classList.add('box','position-relative')
     div.innerHTML = `
-    <div class="msg w-100 center justify-content-end position-absolute">
+    <div  class="msg w-100 center justify-content-end position-absolute">
     <div class="time center h-100 overflow-hidden flex-column justify-content-start">
     <p>${data[i].time}</p>
     
@@ -113,8 +121,8 @@ const msguser = (i)=>{
   </div>
   <div style="background-image: url('${data[i].img}')" class="msimg"></div>
   </div>
-  <div  class="back w-100 h-100 ">
-  <p class="f-r">${data[i].del?"Online":"Ofline"}</p>
+  <div class="back h-100 w-100">
+  <p class="f-r">${data[i].pio}</p>
   <i onclick="setting('msg-id${i}')" class="fas fa-angle-down">
     </i>
     <ul id="msg-id${i}" class=" center flex-column ">
